@@ -1,0 +1,119 @@
+/* your styles go here */
+
+.navigation .sub-menu,
+.navigation .dropdown-list{
+	width: 18rem;
+	text-align: left;
+	line-height: 1.8;
+	background: #222222;
+	background: rgba(34,34,34,1);
+	box-shadow: 0 0.2rem 0.2rem rgba(0,0,0,.3);
+	border: none;
+	border-radius: 0;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: 101;
+}
+.navigation .sub-menu li,
+.navigation .dropdown-list li{
+	background: none;
+	border-bottom: 1px solid #303030;
+	float: none;
+}
+.navigation .dropdown-list.custom-content,
+.navigation .sub-menu.custom-content{
+	width: auto;
+	min-width: 25rem;
+}
+.navigation .dropdown-list.custom-content,
+.navigation .sub-menu.custom-content .custom-content-inner{
+	padding: 2rem;
+}
+.navigation .sub-menu.custom-content ul{
+	padding: 0 2rem 2rem 2rem;
+}
+.navigation .sub-menu.custom-content ul:first-child{
+	padding-top: 2rem;
+}
+.navigation .sub-menu.custom-content ul[class*="bkg-"]{
+	padding: 2rem;
+}
+.navigation .custom-content li:last-child *:last-child{
+	margin-bottom: 0;
+}
+
+/* Sub Menu Positions */
+.navigation > ul > li.sub-menu-left .sub-menu{
+	left: 0;
+}
+.navigation > ul > li:last-child > .sub-menu,
+.navigation > ul > li.sub-menu-right .sub-menu,
+.navigation .dropdown.pull-right .dropdown-list{
+	right: 0;
+}
+.navigation .sub-menu ul{
+	top: 0;
+	left: 18rem;
+}
+.navigation > ul > li:last-child > .sub-menu ul,
+.navigation > ul > li.sub-menu-right .sub-menu ul{
+	right: 18rem;
+	left: auto;
+}
+
+/* Sub Menu Links */
+.navigation .sub-menu:not(.custom-content) li a,
+.navigation .dropdown-list:not(.custom-content) li a{
+	padding: 1.2rem 1.5rem;
+}
+.navigation .sub-menu:not(.custom-content) li a,
+.navigation .dropdown-list:not(.custom-content) li a{
+	color: #666666;
+}
+.navigation .sub-menu:not(.custom-content) li:last-child,
+.navigation .dropdown-list:not(.custom-content) li:last-child{
+	border-bottom: none;
+}
+.navigation .sub-menu li.contains-sub-menu > a:after{
+	font-family: 'icomoon';
+	font-size: inherit;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: inherit;
+	display: inline-block;
+	position: absolute;
+}
+.navigation .sub-menu li.contains-sub-menu > a{
+	padding-right: 2.2rem;
+}
+.navigation .sub-menu li.contains-sub-menu > a:after{
+	right: 0.8rem;  
+	content: "\e640";
+}
+
+/* Menu Animation Attributes */
+.navigation .sub-menu,
+.navigation .mega-sub-menu{
+	-webkit-transition-property: -webkit-transform, opacity, visibility, border-color;
+			transition-property: transform, opacity, visibility, border-color;
+	-webkit-transition-duration: 400ms;
+			transition-duration: 400ms;
+}
+.navigation ul li a{
+	-webkit-transition-property: background, border-color, color, line-height;
+			transition-property: background, border-color, color, line-height;
+	-webkit-transition-duration: 500ms;
+			transition-duration: 500ms;
+}
+
+
+.navigation ul li a:hover{
+	color:#ffffff;
+}
+.navigation ul li:hover > .sub-menu{
+	visibility: visible;
+	opacity: 1;
+} 
